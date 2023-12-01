@@ -11,7 +11,7 @@
         "64bit": {
             "url": [
                 "https://download.jetbrains.com/idea/ideaIU-2023.2.5.exe#/cosi.7z",
-                "https://raw.githubusercontent.com/robinrehbein/scoop/main/scripts/intellij-idea-ultimate-portable.ps1"
+                "https://raw.githubusercontent.com/robinrehbein/scoop/main/scripts/portable.ps1"
             ],
             "hash": [
                 "b031c958e77974510691968f035a146bd6b90ab9d4da500c18528b9e3d28fe47",
@@ -21,7 +21,7 @@
         "arm64": {
             "url": [
                 "https://download.jetbrains.com/idea/ideaIU-2023.2.5-aarch64.exe#/cosi.7z",
-                "https://raw.githubusercontent.com/robinrehbein/scoop/main/scripts/intellij-idea-ultimate-portable.ps1"
+                "https://raw.githubusercontent.com/robinrehbein/scoop/main/scripts/portable.ps1"
             ],
             "hash": [
                 "ab4c8751392d985089094eacb1328b5a17e832d2fb02c55d8f80e84240b25276",
@@ -31,7 +31,7 @@
     },
     "extract_to": "IDE",
     "installer": {
-        "script": "& \"$dir\\intellij-idea-ultimate-portable.ps1\" $dir $persist_dir\nRemove-Item -Path 'IDE\\*\\intellij-idea-ultimate-portable.ps1'"
+        "script": "& \"$dir\\portable.ps1\" $dir $persist_dir\nRemove-Item -Path 'IDE\\*\\portable.ps1'"
     },
     "bin": ["IDE\\bin\\idea64.exe", ["IDE\\bin\\idea64.exe", "idea"]],
     "shortcuts": [
