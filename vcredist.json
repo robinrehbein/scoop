@@ -6,14 +6,6 @@
     "identifier": "Freeware",
     "url": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx"
   },
-  "notes": "Automatically removed vcredist installers with 'scoop uninstall -p vcredist2013 vcredist2022'",
-  "depends": ["extras/vcredist2013", "extras/vcredist2022"],
-  "post_install": [
-    "# For error codes, see https://docs.microsoft.com/en-us/windows/win32/msi/error-codes",
-    "$ec = @{",
-    "    1638 = 'This product is already installed';",
-    "    3010 = 'A restart is required to complete the installation';",
-    "}",
-    "scoop uninstall -p vcredist2013 vcredist2022"
-  ]
+  "notes": "Run 'scoop uninstall -p vcredist2013 vcredist2022' to remove installers.",
+  "depends": ["extras/vcredist2013", "extras/vcredist2022"]
 }
