@@ -9,15 +9,7 @@
   "architecture": {
     "64bit": {
       "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/7.0.404/dotnet-sdk-7.0.404-win-x64.zip",
-      "hash": "sha512:4bb56c6f112eba92f2ad0d35a5e3109512a1dac601d63983ffcca2047760f661f60296c5b68dc1459729888614a8e0205ed4eaf69dfaa5b4614f409e863a0ea0"
-    },
-    "32bit": {
-      "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/7.0.404/dotnet-sdk-7.0.404-win-x86.zip",
-      "hash": "sha512:1f98f8efcee6bfdcee0d3a989bb3b6a3df8a55bd670fe6b13de07202e4953f783151c4a4225a50217742aaf74b678cf04991448b892b562183374ed9091ca63a"
-    },
-    "arm64": {
-      "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/7.0.404/dotnet-sdk-7.0.404-win-arm64.zip",
-      "hash": "sha512:2bc1ab2b2652dabc72625f2fe531c2b06663648d2091d4a448ea36882101d3dd98dd88d027b1e140c7be6d422ffe77ccbed162a537c5728be9843547c33e72a4"
+      "hash": "sha512:d541d2657f0551f53897c8a212ac17dc633a9b299082aa237e0b08e032c5f26f1a0aa277f76ab3ba5d5306955933f279ccd422ea7017725b15374b55ae3e2346"
     }
   },
   "env_add_path": ".",
@@ -34,12 +26,6 @@
     "architecture": {
       "64bit": {
         "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x64.zip"
-      },
-      "32bit": {
-        "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x86.zip"
-      },
-      "arm64": {
-        "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-arm64.zip"
       }
     },
     "hash": {
