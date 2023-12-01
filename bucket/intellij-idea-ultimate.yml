@@ -1,4 +1,56 @@
-{
+version: 2023.2.5-232.10227.8
+description: IntelliJ IDEA Ultimate. Cross-Platform Java IDE for professional developers by JetBrains.
+homepage: https://www.jetbrains.com/idea/
+license:
+  identifier: Proprietary
+  url: https://www.jetbrains.com/store/license.html
+changelog: https://www.jetbrains.com/idea/whatsnew/
+architecture:
+  64bit:
+    url:
+    - https://download.jetbrains.com/idea/ideaIU-2023.2.5.exe#/cosi.7z
+    - https://raw.githubusercontent.com/robinrehbein/scoop/main/scripts/portable.ps1
+    hash:
+    - b031c958e77974510691968f035a146bd6b90ab9d4da500c18528b9e3d28fe47
+    - 00ad147ecd195e69d904051da4199b26c2744dbe7e796b134386fab226ffa1d7
+  arm64:
+    url:
+    - https://download.jetbrains.com/idea/ideaIU-2023.2.5-aarch64.exe#/cosi.7z
+    - https://raw.githubusercontent.com/robinrehbein/scoop/main/scripts/portable.ps1
+    hash:
+    - ab4c8751392d985089094eacb1328b5a17e832d2fb02c55d8f80e84240b25276
+    - 00ad147ecd195e69d904051da4199b26c2744dbe7e796b134386fab226ffa1d7
+extract_to: IDE
+installer:
+  script: |
+    & "$dir\portable.ps1" $dir $persist_dir
+    Remove-AppDirItem 'IDE\$*', 'portable.ps1'
+bin:
+- IDE\bin\idea64.exe
+- - IDE\bin\idea64.exe
+  - idea
+shortcuts:
+- - IDE\bin\idea64.exe
+  - JetBrains\IntelliJ IDEA Ultimate
+persist:
+- IDE\bin\idea.properties
+- profile
+checkver:
+  url: https://data.services.jetbrains.com/products/releases?code=IIU&latest=true&type=release
+  regex: version":"(?<ver>[\d.]+)".*"build":"(?<build>[\d.]+)"
+  replace: ${ver}-${build}
+autoupdate:
+  architecture:
+    64bit:
+      url: https://download.jetbrains.com/idea/ideaIU-${headVersion}.exe#/cosi.7z
+    arm64:
+      url: https://download.jetbrains.com/idea/ideaIU-${headVersion}-aarch64.exe#/cosi.7z
+  hash:
+    url: $url.sha256
+
+
+
+    {
     "version": "2023.2.5-232.10227.8",
     "description": "IntelliJ IDEA Ultimate. Cross-Platform Java IDE for professional developers by JetBrains.",
     "homepage": "https://www.jetbrains.com/idea/",
