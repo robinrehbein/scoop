@@ -31,7 +31,7 @@
     },
     "extract_to": "IDE",
     "installer": {
-        "script": "& \"$dir\\portable.ps1\" $dir $persist_dir\nRemove-AppDirItem 'IDE\\$*', 'portable.ps1'\n"
+        "script": "& \"$dir\\intellij-idea-ultimate-portable-installer.ps1\" $dir $persist_dir\nRemove-AppDirItem 'IDE\\$*', 'intellij-idea-ultimate-portable-installer.ps1'\n"
     },
     "bin": ["IDE\\bin\\idea64.exe", ["IDE\\bin\\idea64.exe", "idea"]],
     "shortcuts": [
