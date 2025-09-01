@@ -1,0 +1,24 @@
+{
+  "version": "4.1.36",
+  "description": "All your chats in one app.",
+  "homepage": "https://beeper.com",
+  "license": "Proprietary",
+  "url": "https://beeper-desktop.download.beeper.com/builds/Beeper Setup 4.1.36.exe",
+  "hash": "SHA256:DEIN_SHA256_HASH_HIER",
+  "installer": {
+    "file": "Beeper Setup 4.1.36.exe",
+    "args": ["/S"],
+    "keep": false
+  },
+  "bin": "Beeper.exe",
+  "checkver": {
+    "url": "https://beeper.com/changelog/desktop",
+    "re": "v([0-9]+\\.[0-9]+\\.[0-9]+)·"
+  },
+  "autoupdate": {
+    "url": "https://beeper-desktop.download.beeper.com/builds/Beeper Setup $version.exe",
+    "hash": {
+      "url": "https://beeper-desktop.download.beeper.com/builds/Beeper Setup $version.exe.sha256"
+    }
+  }
+}
